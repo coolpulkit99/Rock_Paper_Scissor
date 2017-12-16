@@ -76,4 +76,9 @@ right: 10px;
 }
 .timer{
     font-size:210% ;
+    display: inline;
+}
+.counter {
+    font-size: 300%;
+    display: inline;
 }
