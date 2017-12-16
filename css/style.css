@@ -42,14 +42,36 @@ right: 10px;
     top: 50%;
     left:50%;
     margin-left: -120px;
-    margin-top: -120px;
+    margin-top: -200px;
 }
 .option{
     display: inline-block;
     height: 100px;
     width: 100px;
     border-radius: 100%;
-    background-color: lightskyblue;
+    /*background-color: lightskyblue;*/
     position: relative;
     left: auto;
+}
+.stone{
+    background:lightblue url("../assets/rock2.png") no-repeat center;
+    background-size: 70%;
+}
+.paper{
+    background:lightblue url("../assets/paper.png") no-repeat center;
+    background-size: 70%;
+}
+.scissor{
+    background: lightblue url("../assets/kids-scissors-clipart-scissor.svg") no-repeat center;
+    background-size: 70%;
+}
+.text{
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Chiller;
+}
+.subtitle{
+}
+.timer{
+    font-size:210% ;
 }
