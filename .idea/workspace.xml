@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2344d195-6b36-4416-bde0-bf2f355201a1" name="Default" comment="" />
-    <list id="7150b12a-d85f-4604-ada8-f08978d9dd1a" name="New changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list id="7150b12a-d85f-4604-ada8-f08978d9dd1a" name="New changelist" comment="" />
     <ignored path="Rock_Paper_Scissor.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -285,7 +283,7 @@
       <workItem from="1513323135143" duration="1998000" />
       <workItem from="1513404925599" duration="3344000" />
       <workItem from="1513428259151" duration="4903000" />
-      <workItem from="1513458328917" duration="319000" />
+      <workItem from="1513458328917" duration="659000" />
     </task>
     <task id="LOCAL-00001" summary="Progress...">
       <created>1513408547024</created>
@@ -312,7 +310,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19114000" />
+    <option name="totallyTimeSpent" value="19454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
