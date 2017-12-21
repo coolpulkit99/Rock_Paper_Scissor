@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rock Paper Scissor</title>
     <link href="css/style.css" rel="stylesheet"/>
     <script src="js/main.js"></script>
 </head>
@@ -11,14 +11,14 @@
 <button class="bclr white" onclick="White(this)"></button>
 <button class="bclr black" onclick="Black(this)"></button>
 </div>
-<div class="startmodal">
+<div id="startscreen" class="startmodal">
 <button id="start" class="start">
-    Start
+    <!--Start-->
 </button>
 </div>
-<div class="gamecontainer">
+<div id="selectscreen" class="gamecontainer">
     <center>
-        <p id="title" class="text timer">Time to round:<p id="timer" class="text counter">a</p></p>
+        <p id="title" class="text timer">Time to round:<p id="timer" class="text counter">00:05</p></p>
         <p id="subtitle" class="text subtitle">Choose your move:</p>
         <br>
         <div id="rock" class="option stone">
@@ -33,5 +33,14 @@
         </div>
     </center>
 </div>
+<div id="resultsscreen" class="results">
+<div class="playfield player"></div>
+<div class="playfield computer"></div>
+</div>
+
+<div id="foulscreen" class="results">
+
+</div>
+
 </body>
 </html>
