@@ -37,7 +37,7 @@ right: 10px;
     /*width: 100%;*/
     background: transparent;
    /*remove this before final*/
-    display:none;
+    /*display:none;*/
     position: absolute;
 top: 50%;
     left:50%;
