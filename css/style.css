@@ -3,7 +3,8 @@ body{
 }
 .bclrcontainer{
     position: absolute;
-right: 10px;    
+right: 10px;
+    z-index: 4;
 }
 .bclr{
     height: 50px;
@@ -37,7 +38,7 @@ right: 10px;
     /*width: 100%;*/
     background: transparent;
    /*remove this before final*/
-    display:none;
+    /*display:none;*/
     position: absolute;
 top: 50%;
     left:50%;
@@ -67,7 +68,7 @@ z-index: 2;
     position: relative;
     left: auto;
 }
-.stone{
+.rock{
     background:lightblue url("../assets/rock2.png") no-repeat center;
     background-size: 70%;
 }
@@ -95,4 +96,35 @@ z-index: 2;
 .counter {
     font-size: 300%;
     display: inline;
+}
+.results{
+   /*add this before start*/
+    /*display: none;*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: red;
+    background: url("../assets/bolt.svg") center no-repeat;
+    background-size: 50%;
+z-index: 0;
+}
+.playfield{
+    position: absolute;
+    display: inline-block;
+    height: 98%;
+    width: 49%;
+    /*margin: 0px;*/
+    top:50%;
+    margin-top:-120px;
+}
+.player{
+    left: 0%;
+    margin-left: 0px;
+}
+.computer{
+    left: 50%;
+
+}
+.foul{
+    display: none;
 }
