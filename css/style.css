@@ -19,6 +19,7 @@ right: 10px;
     background-color: white;
 }
 .start{
+    animation:rubberBand 2s infinite;
     /*color: red;*/
     font-size: 80px;
     align-content: center;
@@ -99,19 +100,19 @@ z-index: 2;
 }
 .results{
    /*add this before start*/
-    /*display: none;*/
+    display: none;
     position: absolute;
     height: 100%;
     width: 100%;
-    background: red;
-    background: url("../assets/bolt.svg") center no-repeat;
+    /*background: red;*/
+    /*background: url("../assets/bolt.svg") center no-repeat;*/
     background-size: 50%;
 z-index: 0;
 }
 .playfield{
     position: absolute;
     display: inline-block;
-    height: 98%;
+    height: 40%;
     width: 49%;
     /*margin: 0px;*/
     top:50%;
@@ -120,11 +121,23 @@ z-index: 0;
 .player{
     left: 0%;
     margin-left: 0px;
+    animation: jello 1s infinite;
 }
 .computer{
     left: 50%;
-
+    animation: jello 1s infinite;
 }
 .foul{
     display: none;
+}
+.resultsdeclare{
+        animation: tada 1s infinite;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -100px;
+    font-size: 100px;
 }

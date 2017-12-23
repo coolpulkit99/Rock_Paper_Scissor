@@ -36,7 +36,12 @@ document.addEventListener('click',function (e) {
     document.getElementById("rock").style.backgroundColor="#add8e6";
     document.getElementById("paper").style.backgroundColor="#add8e6";
     document.getElementById("scissor").style.backgroundColor="#add8e6";
+    document.getElementById("rock").style.animation="";
+    document.getElementById("paper").style.animation="";
+    document.getElementById("scissor").style.animation="";
+
     document.getElementById(""+usermove).style.backgroundColor="Yellow";
+    document.getElementById(""+usermove).style.animation="tada 1s infinite";
 })
 
 function startTimer(duration, display) {
@@ -94,29 +99,43 @@ else
         compmove="scissor";
 
 
-    alert(compmove+"");
+    // alert(compmove+"");
 document.getElementById("usermove").className+=" "+usermove;
         document.getElementById("compmove").className+=" "+compmove;
     if(usermove==compmove)
     {
         // Draw
-        alert("Draw");
+        // alert("Draw");
+        document.getElementById("resultsdeclare").textContent="It's a Draw";
+        document.getElementById("resultsdeclare").style.color="Blue";
+
     }
     else if((usermove=="scissor" && compmove=="paper") || (usermove=="paper" && compmove=="rock") || (usermove=="rock" && compmove=="scissor"))
     {
         // win
-        alert("Win");
+        // alert("Win");
+
+        document.getElementById("resultsdeclare").textContent="You Win";
+        document.getElementById("resultsdeclare").style.color="Green";
     }
     else if((compmove=="scissor" && usermove=="paper") || (compmove=="paper" && usermove=="rock") || (compmove=="rock" && usermove=="scissor"))
     {
         // lose
-        alert("Lose");
+        // alert("Lose");
+
+        document.getElementById("resultsdeclare").textContent="You Lose";
+        document.getElementById("resultsdeclare").style.color="Red";
     }
 
     }
 
     else
         if(usermove=="none")
+        {
             document.getElementById("foulscreen").style.display="block";
+            document.getElementById("fouldeclare").textContent="It's a Foul";
+            document.getElementById("fouldeclare").style.color="Orange";
+
+        }
 
 }
