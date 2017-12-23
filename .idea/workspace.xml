@@ -80,7 +80,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -186,6 +188,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="H:\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -278,7 +282,7 @@
       <workItem from="1513970418075" duration="76000" />
       <workItem from="1513972165243" duration="116000" />
       <workItem from="1513973249062" duration="1196000" />
-      <workItem from="1514026851325" duration="3263000" />
+      <workItem from="1514026851325" duration="3377000" />
     </task>
     <task id="LOCAL-00001" summary="Progress...">
       <created>1513408547024</created>
@@ -322,11 +326,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514029974574</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Complete 1">
+      <created>1514030192283</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514030192283</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41508000" />
+    <option name="totallyTimeSpent" value="41622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
@@ -364,7 +375,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Progress..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Progress..." />
+    <MESSAGE value="Complete 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete 1" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
