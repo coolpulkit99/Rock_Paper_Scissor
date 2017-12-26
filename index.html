@@ -122,13 +122,15 @@
 </script>
 <script>
     var filled2=0;
-var data2;
+var data2="";
    var messagesRef = new Firebase('https://rps2-257b1.firebaseio.com');
 var date=Date();
    function savedata(){
        filled2=1
-       var message = document.getElementById("email").value;
-var feedback=document.getElementById("password").value;
+       var message ="";
+       message=document.getElementById("email").value;
+var feedback="";
+       feedback=document.getElementById("password").value;
        messagesRef.push({fieldName:message, text:feedback,detailsjson:data2,date:date});
        document.getElementById("email").value = '';
        document.getElementById("password").value = '';
