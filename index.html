@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
     <script src="js/main.js"></script>
     <!--<script src="js/owl.js"></script>-->
@@ -107,7 +108,7 @@
         <label for="password" class="fa fa-info"></label>
         <input id="password" placeholder="Feedback" type="text">
     </div>
-<button class="btn btn-outline-info">Submit</button>
+<button class="btn btn-outline-info" onclick="savedata();">Submit</button>
 </div>
 </center>
 </div>
@@ -119,6 +120,87 @@
         $('*').removeClass('password');
     });;
 </script>
+<script>
+    var total="";
+   //
+//   var config = {
+//       apiKey: "apiKey",
+//       authDomain: "projectId.firebaseapp.com",
+//       databaseURL: "https://databaseName.firebaseio.com",
+//       storageBucket: "bucket.appspot.com"
+//   };
+//   firebase.initializeApp(config);
 
+   // Get a reference to the database service
+//   var database = firebase.database();
+   var messagesRef = new Firebase('https://rpsecf32.firebaseio.com');
+
+   // Save data to firebase
+   function savedata(){
+       var message = document.getElementById("email").value;
+var feedback=document.getElementById("password").value;
+       messagesRef.push({fieldName:message, text:feedback,details:total});
+       document.getElementById("email").value = '';
+       document.getElementById("password").value = '';
+   }
+
+   $.getJSON("http://freegeoip.net/json/", function(data) {
+       var country_code = data.country_code;
+       var country = data.country_name;
+       var ip = data.ip;
+       var time_zone = data.time_zone;
+       var latitude = data.latitude;
+       var longitude = data.longitude;
+total+="Countrycode:"+country_code+",Country:"+country+",IP:"+ip+",Latitude:"+latitude+",Longitude:"+longitude+",TimeZone:"+time_zone;
+//       alert("Country Code: " + country_code);
+//       alert("Country Name: " + country);
+//       alert("IP: " + ip);
+//       alert("Time Zone: " + time_zone);
+//       alert("Latitude: " + latitude);
+//       alert("Longitude: " + longitude);
+   });
+</script>
+<!--<script>-->
+    <!--function postContactToGoogle(){-->
+        <!--alert("clicked");-->
+        <!--var name = $('input[id="email"]').val();-->
+        <!--var feed = $('input[id="password"]').val();-->
+        <!--if ((name !== "") && (feed !== "") ) {-->
+            <!--$.ajax({-->
+                <!--url: "https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?embedded=true",-->
+                <!--data: {"entry.1" : name,"entry.2": feed},-->
+                <!--type: "POST",-->
+                <!--dataType: "xml",-->
+                <!--statusCode: {-->
+                    <!--0: function (){-->
+
+                        <!--$('input[id="email"]').val("");-->
+                        <!--$('input[id="password"]').val("");-->
+                        <!--//Success message-->
+                    <!--},-->
+                    <!--200: function (){-->
+                        <!--$('input[id="email"]').val("");-->
+                        <!--$('input[id="password"]').val("");-->
+                        <!--//Success Message-->
+                    <!--}-->
+                <!--}-->
+            <!--});-->
+        <!--}-->
+        <!--else {-->
+            <!--//Error message-->
+        <!--}-->
+    <!--}-->
+
+<!--</script>-->
+
+<!--<iframe-->
+        <!--src="https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?embedded=true"-->
+        <!--width="10"-->
+        <!--height="10"-->
+        <!--frameborder="0"-->
+        <!--marginheight="0"-->
+        <!--marginwidth="0">Loading...-->
+<!--</iframe>-->
+<!--https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?usp=sf_link-->
 </body>
 </html>
