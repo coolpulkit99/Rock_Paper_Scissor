@@ -262,3 +262,13 @@ border-radius: 0%;
     /*border-radius: 0%;*/
 /*}*/
 }
+@keyframes  disappear{
+    0%{ opacity: .9;
+       display: block;
+    }
+    100%{
+
+        opacity: 0;
+        display: none;
+    }
+}

