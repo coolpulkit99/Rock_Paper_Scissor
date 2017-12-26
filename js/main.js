@@ -64,6 +64,14 @@ function startTimer(duration, display) {
             count+=1;
         if (count ==1)
             gotoResult();
+        if(count==2)
+        {
+            // alert("2 sec");
+            document.getElementById("feedback1").style.display="block";
+            document.getElementById("feedback1").style.animation="zoomIn 2s";
+            document.getElementById("feedback2").style.display="block";
+            document.getElementById("feedback2").style.animation="insideout2 3s";
+        }
         if(timer<2){
             document.getElementById("timer").style.color="Red";
         }
